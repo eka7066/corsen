@@ -1,0 +1,30 @@
+:root {
+    --color-light: #ffffff;
+    --color-dark: #000000;
+    --color-gray: #AAAAAA;   
+
+
+    --font-family-base: 'Noto Sans', sans-serif;
+    --font-family-accent: 'Nunito Sans', sans-serif;
+
+    --input-height: 50px;
+    --input-padding: 15px 22px;
+    --input-border: 2px solid #000000;
+
+    --border-radius: 5px;
+
+    --container-width: 1300px;
+    --container-padding-x: 15px;
+    
+    --transition-duration: 0.2s;
+
+
+    @include desktop {
+        --section-padding-y: 50px;
+    }
+
+    @include mobile {
+        --section-padding-y: 30px;
+    }
+}
+
