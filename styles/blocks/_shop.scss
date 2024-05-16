@@ -1,0 +1,113 @@
+.shop {
+    display: flex;
+    flex-direction: column;
+    column-gap: 10px;
+    align-items: center;
+    justify-content: center;
+
+    &__title {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        width: 46%;
+        font-size: clamp(16px, 1.5vw, 34px);
+
+        &--wrapper {
+            display: flex;
+            width: 100%;
+            align-items: center;
+            justify-content: center;
+            padding-block: 50px;
+        }
+    }
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 65%;
+        row-gap: 10px;
+    }
+
+    &__filter {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        font-size: clamp(11px, 1vw, 18px);
+        text-transform: uppercase;
+        font-weight: 600;
+        padding-right: 50px;
+    }
+
+    &__elements {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        
+    }
+
+    &__card {       
+        -webkit-box-shadow: 0px 0px 0px 1px rgba(0,0,0,1);
+        -moz-box-shadow: 0px 0px 0px 1px rgba(0,0,0,1);
+        box-shadow: 0px 0px 0px 1px rgba(0,0,0,1);
+    }
+
+    &__img {
+        position: relative;
+
+        &--icons {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            row-gap: 10px;
+            position: absolute;
+            top: 4%;
+            right: 6%;
+
+            svg {
+                width: 20px;
+                height: 20px;
+            }
+        }
+    }
+
+    &__description {
+        &--wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;            
+            border-top: 1px solid var(--color-dark);
+        }
+    }
+
+    
+}
+
+.card {
+    &__description {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        flex-direction: column;
+        width: 80%;
+        border-right: 1px solid var(--color-dark);
+        padding-left: 30px;
+        padding-block: 10px;
+    }
+
+    &__name {
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: clamp(12px, 0.6vw, 18px);       
+    }
+
+    &__bag {
+        width: 20%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
