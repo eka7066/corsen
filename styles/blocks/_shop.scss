@@ -27,8 +27,8 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        width: 65%;
         row-gap: 10px;
+        flex-shrink: 0;
     }
 
     &__filter {
@@ -45,17 +45,26 @@
     &__elements {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
+        flex-shrink: 0; 
         
+        @include mobile {            
+            display: flex;
+            flex-direction: column;
+            flex-shrink: 0;            
+        }
     }
 
     &__card {       
         -webkit-box-shadow: 0px 0px 0px 1px rgba(0,0,0,1);
         -moz-box-shadow: 0px 0px 0px 1px rgba(0,0,0,1);
         box-shadow: 0px 0px 0px 1px rgba(0,0,0,1);
+        position: relative;
     }
 
     &__img {
         position: relative;
+        width: 100%;
+        
 
         &--icons {
             display: flex;
@@ -110,4 +119,84 @@
         align-items: center;
         justify-content: center;
     }
+}
+
+
+.img {
+    &__container {
+        display: flex;
+        flex-shrink: 0;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+
+        img {
+            height: auto;
+        }
+    }
+
+
+}
+
+
+
+
+
+.new::after{
+    content: "New";
+    width: 2vw;
+    height: 1vw;
+    padding: 10px 20px;
+    background-color: #fff;
+    color: var(--color-dark);
+    font-size: 14px;
+    font-weight: 500;
+    border: 1px solid var(--color-dark);
+    text-transform: uppercase;
+    position: absolute;
+    top: 5%;
+    left: 9%;
+    translate: -50% -50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sale::after {
+    content: "sale";
+    width: 2vw;
+    height: 1vw;
+    padding: 10px 20px;
+    background-color: #fff;
+    color: var(--color-dark);
+    font-size: 14px;
+    font-weight: 500;
+    border: 1px solid var(--color-dark);
+    text-transform: uppercase;
+    position: absolute;
+    top: 5%;
+    left: 9%;
+    translate: -50% -50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sold::after {
+    content: "Sold";
+    width: 2vw;
+    height: 1vw;
+    padding: 10px 20px;
+    background-color: var(--color-dark);
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    position: absolute;
+    top: 5%;
+    left: 9%;
+    translate: -50% -50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
