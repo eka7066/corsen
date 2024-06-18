@@ -1,0 +1,86 @@
+.quotes {
+    margin-top: 5vw;
+
+    @include mobile-s {
+        margin-top: 10vw;
+    }
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__description {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin: 2vw 0;
+        position: relative;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 4%;
+            translate: -50% -50%;
+            background: url(../../img/icons/arr_left.svg) center / contain no-repeat;
+            width: 15px;
+            height: 30px;
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            right: 4%;
+            translate: -50% -50%;
+            background: url(../../img/icons/arr-right.svg) center / contain no-repeat;
+            width: 15px;
+            height: 30px;
+        }
+    }
+
+    &__text {
+        font-size: 2vw;
+        width: 70%;
+
+        @include mobile {
+            font-size: 4vw;
+        }
+
+        @include mobile-s {
+            font-size: 5vw;
+        }
+    }
+
+    &__brands {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        width: 90%;
+        justify-content: center;
+        align-items: center;
+        justify-items: center;
+        margin-top: 2vw;
+
+        @include mobile {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        @include mobile-s {
+            grid-template-columns: repeat(1, 1fr);
+        }
+
+        &--elem:last-child {
+            @include mobile {
+                grid-column: -1/1;
+            }
+        }
+
+        &--img {
+            width: 100%;
+            height: auto;
+        }
+    }
+    
+}

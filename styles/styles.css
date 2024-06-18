@@ -897,4 +897,188 @@ h4, .h4 {
       -ms-flex-align: center;
           align-items: center;
 }
+
+.big-img {
+  margin-top: 5vw;
+}
+@media (max-width: 480px) {
+  .big-img {
+    margin-top: 10vw;
+  }
+}
+.big-img__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 0px;
+     -moz-column-gap: 0px;
+          column-gap: 0px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+}
+@media (max-width: 767px) {
+  .big-img__body {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+.big-img__man, .big-img__woman {
+  position: relative;
+  -webkit-box-shadow: 0px 0px 0px 1px rgb(0, 0, 0);
+  box-shadow: 0px 0px 0px 1px rgb(0, 0, 0);
+  width: 100%;
+}
+.big-img__img--wrapper {
+  width: 100%;
+}
+.big-img__img {
+  width: 100%;
+  height: auto;
+}
+.big-img__description {
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 0.5vw;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  width: 100%;
+}
+.big-img__title {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 2vw;
+}
+@media (max-width: 767px) {
+  .big-img__title {
+    font-size: 4vw;
+  }
+}
+
+.quotes {
+  margin-top: 5vw;
+}
+@media (max-width: 480px) {
+  .quotes {
+    margin-top: 10vw;
+  }
+}
+.quotes__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.quotes__description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  margin: 2vw 0;
+  position: relative;
+}
+.quotes__description::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 4%;
+  translate: -50% -50%;
+  background: url(../../img/icons/arr_left.svg) center/contain no-repeat;
+  width: 15px;
+  height: 30px;
+}
+.quotes__description::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 4%;
+  translate: -50% -50%;
+  background: url(../../img/icons/arr-right.svg) center/contain no-repeat;
+  width: 15px;
+  height: 30px;
+}
+.quotes__text {
+  font-size: 2vw;
+  width: 70%;
+}
+@media (max-width: 767px) {
+  .quotes__text {
+    font-size: 4vw;
+  }
+}
+@media (max-width: 480px) {
+  .quotes__text {
+    font-size: 5vw;
+  }
+}
+.quotes__brands {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[5];
+  grid-template-columns: repeat(5, 1fr);
+  width: 90%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+  margin-top: 2vw;
+}
+@media (max-width: 767px) {
+  .quotes__brands {
+    -ms-grid-columns: (1fr)[2];
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 480px) {
+  .quotes__brands {
+    -ms-grid-columns: (1fr)[1];
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+@media (max-width: 767px) {
+  .quotes__brands--elem:last-child {
+    grid-column: -1/1;
+  }
+}
+.quotes__brands--img {
+  width: 100%;
+  height: auto;
+}
 /*# sourceMappingURL=styles.css.map */
