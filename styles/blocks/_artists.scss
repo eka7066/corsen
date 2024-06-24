@@ -1,0 +1,77 @@
+.artists {
+    margin-top: 5vw;
+
+    @include mobile-s {
+        margin-top: 10vw;
+    }
+
+    &__body {
+        display: flex;
+        column-gap: 5vw;
+        align-items: center;
+        justify-content: center;
+
+        @include mobile {
+            flex-direction: column;
+            row-gap: 5vw;
+        }
+    }
+
+    &__img {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        column-gap: 1vw;
+        width: 48vw;
+
+        @include mobile {
+            width: 80%;
+        }
+
+        &--maria, &--sophia {
+            width: 100%;
+        }
+        &--maria img, &--sophia img{
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    &__description {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        flex-direction: column;
+        row-gap: 1vw;
+        width: 21vw;
+
+        @include mobile {
+            width: 80%;
+            align-items: center;
+        }
+    }
+
+    &__title {
+
+        & h2 {
+        align-items: center;
+        font-size: clamp(18px, 1.5vw, 2vw);
+
+        @include mobile {
+            font-size: 4vw;
+            text-align: center;
+        }
+    }
+    }
+
+    &__post-title {
+        font-family: var(--font-family-accent);
+        font-size: clamp(16px, 1vw, 1.2vw);
+
+        @include mobile {
+            text-align: center;
+        }
+    }
+    
+    
+}

@@ -1,0 +1,33 @@
+.end-sections {
+    margin-top: 5vw;
+
+    @include mobile-s {
+        margin-top: 10vw;
+    }
+
+    &__body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @include mobile {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    &__wrapper {
+        width: 100%;
+        -webkit-box-shadow: 0px 0px 0px 1px rgba(0,0,0,1);
+        -moz-box-shadow: 0px 0px 0px 1px rgba(0,0,0,1);
+        box-shadow: 0px 0px 0px 1px rgba(0,0,0,1);
+    }
+    &__description {
+        display: flex;
+        column-gap: 10px;
+        align-items: center;
+        justify-content: center;
+        font-weight: 600; 
+        padding: 2vw; 
+    }
+}
