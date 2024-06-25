@@ -147,25 +147,28 @@
 
                 &::after{
                     content: "September 29, 2024";
-                    width: 12vw;
+                    width: 8vw;
                     height: 1vw;
-                    padding: 10px 20px;
+                    padding-block: 0.5vw;
                     background-color: #fff;
                     color: var(--color-dark);
-                    font-size: .8vw;
+                    font-size: .6vw;
                     font-weight: 500;
                     border: 1px solid var(--color-dark);
                     text-transform: uppercase;
                     position: absolute;
-                    top: 6%;
-                    left: 34%;
+                    top: 4%;
+                    left: 20%;
                     translate: -50% -50%;
                     display: flex;
                     justify-content: center;
                     align-items: center;
 
                     @include desktop{
-                        left: 23%;
+                        left: 18%;
+                        font-size: .8vw;
+                        width: 11vw;
+                        padding-block: 1vw;
                     }
 
                     @include tablet {
@@ -177,11 +180,13 @@
                         width: 30vw;
                         font-size: 1.8vw;
                         left: 19%;
+                        padding-block: 1.5vw;
                     }
                     @include mobile-s {
                         width: 40vw;
                         font-size: 2.6vw;
                         left: 28%;
+                        padding-block: 2.5vw;
                     }
                 }
             }
